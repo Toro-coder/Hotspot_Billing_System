@@ -26,7 +26,7 @@ def pay_hotspot(request):
         )
 
     try:
-        amount = int(amount)
+        amount = float(amount)
     except (ValueError, TypeError):
         return Response(
             {"detail": "amount must be an integer"}, status=status.HTTP_400_BAD_REQUEST

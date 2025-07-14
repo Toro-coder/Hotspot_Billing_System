@@ -2,13 +2,18 @@ import base64
 from datetime import datetime
 import requests
 from requests.auth import HTTPBasicAuth
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # === DARAJA SANDBOX CREDENTIALS ===
-CONSUMER_KEY = "PNDk48Ppta0Qs2uoOxUVAuh0vhGuMW5B4BB5zckA9bK0vVIz"
-CONSUMER_SECRET = "oD6A3fD7T6tSpo1ZGgNoAJnbQX9CxB2YqN6eWibDcN16020imfSRiYYbgSg3awqz"
+CONSUMER_KEY = os.getenv("CONSUMER_KEY")
+CONSUMER_SECRET = os.getenv("CONSUMER_SECRET")
 
 BUSINESS_SHORTCODE = "174379"
-PASSKEY = "bfb279f9aa9bdbcf15e97dd71a467cd2c2c3c9a15bd8b7a62c3c5d1e87b84ddf"
+PASSKEY = os.getenv("PASS_KEY")
 
 # Use a valid https callback, even if dummy — Safaricom requires HTTPS
 CALLBACK_URL = "https://mydomain.com/callback"
