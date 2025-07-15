@@ -16,7 +16,7 @@ BUSINESS_SHORTCODE = "174379"
 PASSKEY = os.getenv("PASS_KEY")
 
 # Use a valid https callback, even if dummy — Safaricom requires HTTPS
-CALLBACK_URL = "https://mydomain.com/callback"
+CALLBACK_URL = "https://c49ded4d78d4.ngrok-free.app/api/callback/"
 
 
 def _access_token() -> str:
@@ -29,7 +29,7 @@ def _access_token() -> str:
 def initiate_stk_push(phone_number: str, amount: int) -> dict:
     # Format phone number correctly (e.g. 254708374149)
     if not phone_number.startswith("254") or len(phone_number) != 12:
-        raise ValueError("Phone number must be in format 2547XXXXXXXX")
+        raise ValueError("Phone number must be in format 254XXXXXXXX")
 
     access_token = _access_token()
 
