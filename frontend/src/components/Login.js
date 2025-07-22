@@ -36,7 +36,7 @@ const Login = () => {
           </g>
         </g>
       </svg>
-                <h1 className="md:text-3xl text-2xl font-bold ">I-tech Internet</h1>
+                <h1 className="md:text-3xl text-2xl font-bold ">HighTech Internet</h1>
             </div>
                 <h2 className="md:text-2xl text-lg font-bold">Instruction for access</h2>
                 <ol class="list-decimal pl-6 text-xs md:text-base ">
