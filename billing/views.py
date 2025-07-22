@@ -7,7 +7,7 @@ from rest_framework import status
 from .models import Payment
 from .mpesa import initiate_stk_push
 
-
+@csrf_exempt
 @api_view(["POST"])
 def pay_hotspot(request):
     """
@@ -46,7 +46,7 @@ def pay_hotspot(request):
         )
 
     return Response(
-        {"message": "STK Push initiated", "mpesa_response": mpesa_resp},
+        {"detail": "STK Push initiated", "mpesa_response": mpesa_resp},
         status=status.HTTP_202_ACCEPTED,
     )
 
